@@ -69,4 +69,4 @@ git push origin master
 ```
 
 Check your results in GitHub Actions:
-![GitHub Actions results](githubactionsresults.png)
+![GitHub Actions results](githubactionsresults_wrangler.png)
