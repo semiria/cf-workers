@@ -38,9 +38,11 @@ Where:
 You can also add a `.gitignore` file, which will indicate to git which files and folders to not include in its history. You can use the [Node `.gitinore` template available from GitHub](https://github.com/github/gitignore/blob/master/Node.gitignore).
 
 ## Configure wrangler
-In `wrangler.toml`, you will see `account_id`, `route` and `zone_id`. These will be configured in the CI system as environments variables and can be safely removed from `wrangler.toml`.
+In `wrangler.toml`, you will see `account_id` and `zone_id`. These will be configured in the CI system as environments variables and can be safely removed from `wrangler.toml`.
 
-Set `workers_dev`, to `false`.
+Set `workers_dev` to `false`.
+
+Set `route` to the route that your worker will match on, for example `example.com/cf-worker`.
 
 [A complete example of a `wrangler.toml` file can be found here.](wrangler.toml)
 
