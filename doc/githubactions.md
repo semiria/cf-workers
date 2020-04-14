@@ -27,13 +27,13 @@ jobs:
           CF_EMAIL: ${{secrets.CF_EMAIL}}
           CF_ACCOUNT_ID: ${{secrets.CF_ACCOUNT_ID}}
           CF_ZONE_ID: ${{secrets.CF_ZONE_ID}}
-          CF_API_TOKEN: ${{secrets.CF_API_TOKEN}}
+          CF_API_KEY: ${{secrets.CF_API_KEY}}
 ```
 
 Where
 * `runs-on: ubuntu-latest` indicates the build environment will be ubuntu
 * `name: Deploy Cloudflare Worker` is the display name of your job
-* `steps` this job will checkout the code, install its dependencies with `npm install` and deploy the Cloudflare Worker using `npx wrangler publish`. You can see 4 environments variables: `CF_EMAIL`, `CF_ACCOUNT_ID`, `CF_ZONE_ID` and `CF_API_TOKEN`. Those will be set at a later step.
+* `steps` this job will checkout the code, install its dependencies with `npm install` and deploy the Cloudflare Worker using `npx wrangler publish`. You can see 4 environments variables: `CF_EMAIL`, `CF_ACCOUNT_ID`, `CF_ZONE_ID` and `CF_API_KEY`. Those will be set at a later step.
 
 [A complete example of a `.github/workflows/cloudflare.yml` file can be found here.](../.github/workflows/cloudflare.yml)
 
@@ -48,7 +48,7 @@ Add the following secrets:
 * `CF_EMAIL`: your Cloudflare email
 * `CF_ACCOUNT_ID`: your Cloudflare account ID
 * `CF_ZONE_ID`: your Cloudflare Zone ID
-* `CF_API_TOKEN`: your Cloudflare Global API Key
+* `CF_API_KEY`: your Cloudflare Global API Key
 
 Back to `.github/workflows/cloudflare.yml`, we remember setting those 4 environments variables:
 ```yaml
@@ -56,7 +56,7 @@ env:
   CF_EMAIL: ${{secrets.CF_EMAIL}}
   CF_ACCOUNT_ID: ${{secrets.CF_ACCOUNT_ID}}
   CF_ZONE_ID: ${{secrets.CF_ZONE_ID}}
-  CF_API_TOKEN: ${{secrets.CF_API_TOKEN}}
+  CF_API_KEY: ${{secrets.CF_API_KEY}}
 ```
 
 Where `${{secrets....}}` indicates GitHub Actions to fetch the value from the secrets.
