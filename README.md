@@ -42,7 +42,11 @@ In `wrangler.toml`, you will see `account_id` and `zone_id`. These will be confi
 
 Set `workers_dev` to `false`.
 
+`name` will be the worker name in your Cloudflare account.
+
 Set `route` to the route that your worker will match on, for example `example.com/cf-worker`.
+
+If you're using an existing Cloudflare worker, make sure the name and route matches.
 
 [A complete example of a `wrangler.toml` file can be found here.](wrangler.toml)
 
