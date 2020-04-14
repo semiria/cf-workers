@@ -11,7 +11,7 @@ Where
 * `language: node_js` will use a javascript build environment with Node.js installed
 * `"node"` will use the latest stable version of Node.js
 
-Describe the deployment action:
+Describe the deploy action:
 ```yaml
 deploy:
   - provider: script
@@ -51,4 +51,4 @@ git push origin master
 
 Check your results in Travis CI:
 ![Travis CI results](travisciresults2.png)
-![Travis CI results](travisciresults.png)
+![Travis CI results](travisciresults_wrangler.png)
